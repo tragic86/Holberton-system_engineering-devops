@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#script for fizzbuzz
+
+i=0
+while [ $i -le 99 ]
+do
+	let i++
+	if (( "$i" % 3 == 0  &&  "$i" % 5 == 0 ))
+	then
+	    echo "Fizzbuzz"
+	elif (( "$i" % 3 == 0 ))
+	then
+	    echo "Fizz"
+	elif (( "$i" % 5 == 0 ))
+	then
+	    echo "Buzz"
+	 else
+	    echo "$i"
+	fi
+done
