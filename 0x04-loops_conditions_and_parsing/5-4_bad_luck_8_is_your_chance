@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#script to loop to ten display messages at diff iterations
+
+i=1
+while [ $i -le 10 ]
+do
+ 	let i++     
+ 	if [ "$i" -eq 5 ]
+ 	then
+ 	    echo "bad luck"
+ 	elif [ "$i" -eq 9 ]
+ 	then
+ 	    echo "good luck"
+ 	else
+	    echo "Holberton School"
+ 	fi
+done
