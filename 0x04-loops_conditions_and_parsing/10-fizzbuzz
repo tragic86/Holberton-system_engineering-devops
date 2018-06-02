@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #script for fizzbuzz
 
-i=0
+i=1
 while [ $i -le 100 ]
 do
-	let i++
+
 	if (( "$i" % 3 == 0  &&  "$i" % 5 == 0 ))
 	then
 	    echo "Fizzbuzz"
@@ -17,4 +17,5 @@ do
 	 else
 	    echo "$i"
 	fi
+	let i++
 done
