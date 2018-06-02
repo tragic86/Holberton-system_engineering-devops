@@ -6,7 +6,7 @@ then
     echo "holbertonschool file exists"
     if [ -s "holbertonschool" ]
     then
-	echo "holberton file is not empty"
+	echo "holbertonschool file is not empty"
     else
 	echo "holbertonschool file is empty"
     fi
