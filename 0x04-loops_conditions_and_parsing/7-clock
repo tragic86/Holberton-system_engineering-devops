@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#script to display time 
+
+
+hour=0
+minutes=0
+
+while [ "$hour" -le 12 ]
+do
+	echo "hour: $hour"
+  	let hour++
+      	while [ "$minutes" -le 58 ]
+      	do
+	    let minutes++
+	    echo "$minutes"
+	done
+	minutes=0
+done
