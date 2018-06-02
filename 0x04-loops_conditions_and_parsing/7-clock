@@ -3,16 +3,16 @@
 
 
 hour=0
-minutes=0
+minutes=1
 
 while [ "$hour" -le 12 ]
 do
-	echo "hour: $hour"
+	echo "Hour: $hour"
   	let hour++
-      	while [ "$minutes" -le 58 ]
+	minutes=1
+      	while [ "$minutes" -le 59 ]
       	do
-	    let minutes++
 	    echo "$minutes"
+	    let minutes++
 	done
-	minutes=0
 done
