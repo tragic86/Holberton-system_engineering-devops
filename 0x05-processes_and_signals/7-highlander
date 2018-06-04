@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#script to display message when using sigterm signal
+
+function special
+{
+    echo "I am invincible!!!"
+}
+
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+
+
+trap special SIGTERM
+done
