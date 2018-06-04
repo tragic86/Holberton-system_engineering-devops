@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#script to kill process
+
+
+pgrep -f ./4 | xargs kill
