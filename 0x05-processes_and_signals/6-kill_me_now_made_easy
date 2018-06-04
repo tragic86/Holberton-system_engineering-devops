@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#script to kill process without using kill
+
+
+pkill -f ./4
