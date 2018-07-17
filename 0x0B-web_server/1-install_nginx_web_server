@@ -2,5 +2,5 @@
 #script to install nginx web server
 sudo apt-get update
 sudo apt-get -y install nginx
-sudo echo "Holberton school" | sudo tee /usr/share/nginx/html/index.html
+sudo echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
 sudo service nginx start
