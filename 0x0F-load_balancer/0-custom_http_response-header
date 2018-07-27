@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#script for load balance
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+sudo sed -i "18i \\t add_header X-Served-By $HOSTNAME;\n" /etc/nginx/nginx.conf
+sudo service nginx restart
