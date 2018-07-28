@@ -2,6 +2,6 @@
 #script for load balance
 sudo apt-get -y update
 sudo apt-get -y install nginx
-temp="/etc/nginx/sites-avaiable/default"
+temp="/etc/nginx/sites-available/default"
 sudo sed -i "37i \\\t add_header X-Served-By $HOSTNAME;\n" $temp
 sudo service nginx restart
