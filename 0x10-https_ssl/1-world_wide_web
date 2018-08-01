@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# configure domain zones
+
+if [ $# -eq 1 ]; then
+    for i in www lb-01 web-01 web-02; do
+    temp="$(dig "$ser"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')"
+    temp2="$(dig "$ser"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')"
+    echo "The subdomain $i is a $temp record and points to temp2"
+    done
+elif [ $# -eq 2 ]; then
+    temp="$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')"
+    temp2="$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')"
+    echo "The subdomain $2 is a $temp record and points to $temp"
+fi
