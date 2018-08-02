@@ -1,0 +1,3 @@
+sudo utf allow ssh
+sudo utf allow http
+sudo utf allow https
