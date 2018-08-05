@@ -1,0 +1,1 @@
+This is about what happens when you type into your browser
