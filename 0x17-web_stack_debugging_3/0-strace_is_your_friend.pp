@@ -1,4 +1,6 @@
-exec { 'fix':
-  command => 'mv /var/www/html/wp-includes/class-wp-locale.php /var/www/html/wp-includes/class-wp-locale.phpp',
-  path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+#change phpp script
+exec {'fix error':
+  path    => '/usr/sbin:/usr/bin:/sbin/:/bin/',
+  command => 'sed -i "s/.phpp/.php/g" /var/www/html/wp-settings.php',
+  onlyif  => 'test -f /var/www/html/wp-settings.php'
 }
